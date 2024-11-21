@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style_ia.css"/>
+    <title>IA</title>
+</head>
+<body>
+    <!-- MENÚ SUPERIOR -->
+    <div class="menu">
+        <div class="logo">Montsià30</div>
+        <div class="principal">
+            <!-- Botó "Índex" que redirigeix a index.html -->
+            <button onclick="window.location.href='index.html'" class="menu-button">Índex</button>
+            <button onclick="window.location.href='index_xml_view.html'" class="menu-button">Vore XML archiu</button>
+        </div>
+        <div class="search">
+            <a href="javascript:void(0);" onclick="toggleCercador()">
+                <img src="images/search.png" class="small-icon" alt="Cercar">
+            </a>
+            <!-- Formulari de cerca que apareixerà a l'esquerra de la lupa -->
+            <input type="text" id="buscador" class="cercador-input" placeholder="Cerca empresa...">
+        </div>
+    </div>
+    
+    <div id="titol">
+        <h1> LA INTELIGENCIA ARTIFICIAL </h1>
+    </div>
+
+    <div id="index">
+        <ul>
+            <li><a href="#item1">Que es la IA ?</a></li>
+            <li><a href="#item2">Com funciona la IA ?</a></li>
+            <li><a href="#item3">Machine learning per a "dummies"</a></li>
+        </ul>
+    </div>
+
+    <div id="menu">
+        <div class="item" id="item1">
+            <h2>Que es la IA ?</h2>
+            <p>La intel·ligència artificial (IA) és una branca de la informàtica que busca crear sistemes capaços de realitzar tasques que habitualment requereixen de la intel·ligència humana...</p>
+        </div>
+
+        <div class="item" id="item2">
+            <div class="text">
+                <h2>Com funciona la IA ?</h2>
+                <p>La intel·ligència artificial (IA) funciona mitjançant l'ús d'algoritmes i models matemàtics...</p>
+                <p><b>1. Aprenentatge supervisat:</b> En aquest mètode, un sistema és entrenat amb un conjunt de dades etiquetades...</p>
+                <p><b>2. Aprenentatge no supervisat:</b> A diferència de l'aprenentatge supervisat...</p>
+                <p><b>3. Aprenentatge per reforç:</b> Aquest tipus d'aprenentatge es basa en l'interacció d'un agent...</p>
+            </div>
+            <img class="image" src="images/ia.png" alt="IA">
+        </div>
+
+        <div class="item" id="item3">
+            <h2>Machine learning per a "dummies"</h2>
+            <p>Imagineu-vos que teniu una màquina (o un ordinador) i voleu que aprengui alguna cosa nova...</p>
+            <p><b>Dades d'entrada:</b> La màquina necessita exemples per aprendre...</p>
+            <p><b>Model:</b> El sistema crea un model a partir d'aquestes dades...</p>
+            <p><b>Predicció:</b> Un cop el model està entrenat, pot començar a fer prediccions...</p>
+            <p><b>Millora:</b> Quan la màquina comet errors, s'ajusta i intenta millorar...</p>
+        </div>
+    </div>
+
+    <script>
+        function toggleCercador() {
+            var buscador = document.getElementById('buscador');
+            if (buscador.style.display === "none" || buscador.style.display === "") {
+                buscador.style.display = "block";
+            } else {
+                buscador.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
